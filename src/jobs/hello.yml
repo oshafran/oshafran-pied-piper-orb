@@ -14,4 +14,3 @@ steps:
       at: /root/project
   - pipeline:
       dir: << parameters.dir >>
-      
