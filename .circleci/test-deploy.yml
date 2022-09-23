@@ -16,7 +16,9 @@ jobs:
     steps:
       - checkout
       # Run your orb's commands to validate them.
-      - oshafran-pied-piper-orb/pipeline
+      - oshafran-pied-piper-orb/pipeline:
+          dir: /root/project/collections
+
 workflows:
   test-deploy:
     jobs:
