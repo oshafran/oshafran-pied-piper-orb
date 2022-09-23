@@ -9,4 +9,4 @@ steps:
       environment:
         COLLECTIONS_DIR: <<parameters.dir>>
       name: Newman runner
-      command: <<include(scripts/greet.sh)>>
+      command: <<include(scripts/newman.sh)>>
