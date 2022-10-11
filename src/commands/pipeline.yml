@@ -4,9 +4,21 @@ parameters:
   dir:
     type: string
     description: "directory of the postman configuration files"
+  vManageIP:
+    type: string
+    description: "vManage IP to be configured"
+  vManageUser:
+    type: string
+    description: "vManage User"
+  vManagePwd:
+    type: string
+    description: "vManage Password"
 steps:
   - run:
       environment:
         COLLECTIONS_DIR: <<parameters.dir>>
+        VMANAGEIP: <<parameters.vManageIP>>
+        VMANAGEUSER: <<parameters.vManageUser>>
+        VMANAGEPASSWORD: <<parameters.vManagePwd>>
       name: Newman runner
       command: <<include(scripts/pipeline.sh)>>

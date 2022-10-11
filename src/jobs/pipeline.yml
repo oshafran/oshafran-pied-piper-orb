@@ -9,8 +9,23 @@ parameters:
     type: string
     default: "/root/project/collections"
     description: "Hello to whom?"
+  vManageIP:
+    type: string
+    default: "11.222.33.444"
+    description: "vManage IP to be configured"
+  vManageUser:
+    type: string
+    default: "admin"
+    description: "vManage User"
+  vManagePwd:
+    type: string
+    default: "123"
+    description: "vManage Password"
 steps:
   - attach_workspace:
       at: /root/project
   - pipeline:
       dir: << parameters.dir >>
+      vManageIP: <<parameters.vManageIP>>
+      vManageUser: <<parameters.vManageUser>>
+      vManagePwd: <<parameters.vManagePwd>>
