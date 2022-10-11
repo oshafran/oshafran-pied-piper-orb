@@ -8,7 +8,8 @@ parameters:
     type: string
     description: "directory of the openapi spec"
   vManageIP:
-    type: string
+    type: env_var_name
+    default: VMANAGEIP
     description: "vManage IP to be configured"
   vManageUser:
     type: string
