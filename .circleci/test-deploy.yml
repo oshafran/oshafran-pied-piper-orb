@@ -19,7 +19,6 @@ jobs:
       - oshafran-pied-piper-orb/pipeline:
           dir: /root/project/collections
           openapiDir: /root/project/openapi
-          vManageIP: VMANAGEIP 
           vManageUser: admin
           vManagePwd: abc
 workflows:

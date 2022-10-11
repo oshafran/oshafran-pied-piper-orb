@@ -7,10 +7,6 @@ parameters:
   openapiDir:
     type: string
     description: "directory of the openapi spec"
-  vManageIP:
-    type: env_var_name
-    default: VMANAGEIP
-    description: "vManage IP to be configured"
   vManageUser:
     type: string
     description: "vManage User"
@@ -22,7 +18,6 @@ steps:
       environment:
         COLLECTIONS_DIR: <<parameters.dir>>
         OPENAPI_DIR: <<parameters.openapiDir>>
-        VMANAGEIP: <<parameters.vManageIP>>
         VMANAGEUSER: <<parameters.vManageUser>>
         VMANAGEPASSWORD: <<parameters.vManagePwd>>
       name: Newman runner
