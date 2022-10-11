@@ -19,7 +19,7 @@ parameters:
     description: "vManage User"
   vManagePwd:
     type: string
-    default: "123"
+    default: "abc"
     description: "vManage Password"
 steps:
   - attach_workspace:
