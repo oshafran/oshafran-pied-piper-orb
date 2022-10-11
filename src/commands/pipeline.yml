@@ -13,11 +13,15 @@ parameters:
   vManagePwd:
     type: string
     description: "vManage Password"
+  vManageIP:
+    type: string
+    description: "vManage IP to be configured"
 steps:
   - run:
       environment:
         COLLECTIONS_DIR: <<parameters.dir>>
         OPENAPI_DIR: <<parameters.openapiDir>>
+        VMANAGEIP: <<parameters.vManageIP>>
         VMANAGEUSER: <<parameters.vManageUser>>
         VMANAGEPASSWORD: <<parameters.vManagePwd>>
       name: Newman runner
