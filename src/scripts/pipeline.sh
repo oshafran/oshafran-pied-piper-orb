@@ -1,3 +1,3 @@
 #!/bin/bash
 node /root/install.js
-node /root/index
+node /root/p4.js
