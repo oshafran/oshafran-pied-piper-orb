@@ -4,6 +4,9 @@ parameters:
   dir:
     type: string
     description: "directory of the postman configuration files"
+  openapiDir:
+    type: string
+    description: "directory of the openapi spec"
   vManageIP:
     type: string
     description: "vManage IP to be configured"
@@ -17,6 +20,7 @@ steps:
   - run:
       environment:
         COLLECTIONS_DIR: <<parameters.dir>>
+        OPENAPI_DIR: <<parameters.openapiDir>>
         VMANAGEIP: <<parameters.vManageIP>>
         VMANAGEUSER: <<parameters.vManageUser>>
         VMANAGEPASSWORD: <<parameters.vManagePwd>>
