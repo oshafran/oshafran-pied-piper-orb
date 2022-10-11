@@ -20,7 +20,7 @@ jobs:
           dir: /root/project/collections
           vManageIP: 11.222.33.4444
           vManageUser: admin
-          vManagePwd: 123
+          vManagePwd: abc
 workflows:
   test-deploy:
     jobs:
