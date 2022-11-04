@@ -1,0 +1,36 @@
+description: >
+  Sample description
+# What will this job do?
+
+executor: default
+
+parameters:
+  dir:
+    type: string
+    default: "/root/project/collections"
+    description: "Hello to whom?"
+  openapiDir:
+    type: string
+    default: "/root/project/openapi"
+    description: "Hello to whom?"
+  vManageIP:
+    type: string
+    default: "11.222.33.444"
+    description: "vManage IP to be configured"
+  vManageUser:
+    type: string
+    default: "admin"
+    description: "vManage User"
+  vManagePwd:
+    type: string
+    default: "abc"
+    description: "vManage Password"
+steps:
+  - attach_workspace:
+      at: /root/project
+  - compatibility:
+      dir: << parameters.dir >>
+      openapiDir: << parameters.openapiDir>>
+      vManageIP: <<parameters.vManageIP>>
+      vManageUser: <<parameters.vManageUser>>
+      vManagePwd: <<parameters.vManagePwd>>

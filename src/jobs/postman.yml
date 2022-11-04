@@ -1,0 +1,21 @@
+description: >
+  Sample description
+# What will this job do?
+
+executor: default
+
+parameters:
+  dir:
+    type: string
+    default: "/root/project/collections"
+    description: "Hello to whom?"
+  openapiDir:
+    type: string
+    default: "/root/project/openapi"
+    description: "Hello to whom?"
+steps:
+  - attach_workspace:
+      at: /root/project
+  - postman:
+      dir: << parameters.dir >>
+      openapiDir: << parameters.openapiDir>>
