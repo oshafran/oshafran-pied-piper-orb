@@ -12,5 +12,5 @@ steps:
       environment:
         COLLECTIONS_DIR: <<parameters.dir>>
         OPENAPI_DIR: <<parameters.openapiDir>>
-      name: Postman Generator 
+      name: Postman Generator
       command: <<include(scripts/postman.sh)>>
