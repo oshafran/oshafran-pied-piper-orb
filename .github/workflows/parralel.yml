@@ -43,5 +43,5 @@ jobs:
   info:
     runs-on: ubuntu-latest
     steps:
-        - name: /output Context
-          run: echo "$ {{ toJSON(github)}}"
+        - name: output context
+          run: echo "${{ toJSON(github) }}"
