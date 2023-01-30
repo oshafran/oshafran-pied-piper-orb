@@ -40,3 +40,8 @@ jobs:
     steps:
         - name: Run a deployment script
           run: echo Deployment....!
+  info:
+    runs-on: ubuntu-latest
+    steps:
+        - name: /output Context
+          run: echo "$ {{ toJSON(github)}}"
